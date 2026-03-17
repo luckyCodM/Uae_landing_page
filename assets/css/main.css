@@ -545,6 +545,16 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Pure Counter
+--------------------------------------------------------------*/
+.counter-plus::after {
+  content: "+";
+  margin-left: 3px;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
@@ -565,8 +575,8 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 55px;
+  margin-right: 8px;
 }
 
 .footer .footer-about .logo span {
@@ -596,12 +606,35 @@ h6 {
   transition: 0.3s;
 }
 
+
+/* Social Icons Wrapper */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;                 
+}
+
+/* Social Icon Style */
+.social-links a i {
+  font-size: 1.4rem;         
+  color: white;              
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.social-links a:hover i {
+  color: #ff6b3d;            
+  transform: translateY(-3px);
+}
+
+
+
 .footer .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.footer h4 {
+.footer h3 {
   font-size: 16px;
   font-weight: bold;
   position: relative;
@@ -932,11 +965,13 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: start;
 }
 
 .hero p {
@@ -987,14 +1022,22 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+  .hero h1 {
+    font-size: 30px;
+    text-align: center;
   }
 
   .hero p {
     font-size: 18px;
   }
 }
+ .hero-form-box {
+  background: #6a6a6a;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1946,9 +1989,3 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
